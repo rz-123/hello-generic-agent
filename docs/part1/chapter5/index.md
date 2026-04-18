@@ -473,4 +473,4 @@ python frontends/fsapp.py &
 
 ---
 
-[上一章：第 4 章 核心能力与工具](../chapter4/) | [下一章：第 6 章 进阶玩法](../chapter6/)
+[上一章：第 4 章 记忆与 Skill 系统](../chapter4/) | [下一章：第 6 章 进阶玩法](../chapter6/)

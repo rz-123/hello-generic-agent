@@ -475,4 +475,4 @@ native_claude_config = {
 
 ---
 
-[下一章：第 2 章 基础对话与任务](../chapter2/)
+[下一章：第 2 章 浏览器能力解锁](../chapter2/)
