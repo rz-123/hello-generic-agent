@@ -183,7 +183,7 @@ GA 会打开淘宝搜索相关商品，并整理推荐结果：
 ## 2.4 常见问题
 
 <details>
-<summary><strong>Q1：安装插件时报错怎么办？</strong></summary>
+<summary><strong>Q1: 安装插件时报错怎么办？</strong></summary>
 
 ![](./images/img_12.png)
 
@@ -192,35 +192,35 @@ GA 会打开淘宝搜索相关商品，并整理推荐结果：
 </details>
 
 <details>
-<summary><strong>Q2：GA 能否操作需要登录的网站？</strong></summary>
+<summary><strong>Q2: GA 能否操作需要登录的网站？</strong></summary>
 
 **可以，这也是该方案的核心优势之一。** 插件直接使用你本机的浏览器，凡是你已登录的站点，GA 均可直接访问，无需提供账号密码或 OAuth 令牌。
 
 </details>
 
 <details>
-<summary><strong>Q3：篡改猴插件要不要装？</strong></summary>
+<summary><strong>Q3: 篡改猴插件要不要装？</strong></summary>
 
 **当前版本无需安装篡改猴**，直接使用 2.1 所述 `tmwd_cdp_bridge` 扩展即可。篡改猴方案仅在 CDP 插件无法使用的特殊环境下作为回退。
 
 </details>
 
 <details>
-<summary><strong>Q4：GA 是否自带浏览器？必须额外安装吗？</strong></summary>
+<summary><strong>Q4: GA 是否自带浏览器？必须额外安装吗？</strong></summary>
 
 GA **不自带**浏览器。它通过 CDP（Chrome DevTools Protocol）扩展接管你本机已有的 Chrome / Edge / 夸克，沿用你的登录态与浏览器环境。这与 Selenium、Playwright 等启动独立浏览器实例的方案有本质差异。
 
 </details>
 
 <details>
-<summary><strong>Q5：能否让 GA 绕过滑块验证码？</strong></summary>
+<summary><strong>Q5: 能否让 GA 绕过滑块验证码？</strong></summary>
 
 **不建议尝试。** 这类人机校验依赖专用风控识别，GA 的 CDP 插件定位是"自动化已登录用户的正常操作"，并非破解工具。
 
 </details>
 
 <details>
-<summary><strong>Q6：GA 能否自动登录网站？</strong></summary>
+<summary><strong>Q6: GA 能否自动登录网站？</strong></summary>
 
 **不能，且不需要。** GA 使用的正是你自己的浏览器，因此需要你本人预先完成一次登录（扫码、输密码、二次验证等），此后浏览器会自行保留会话。
 

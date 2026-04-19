@@ -88,7 +88,7 @@ python wechatapp.py
 启动后会自动弹出二维码，用微信扫码即可连接。
 
 <details>
-<summary>❓ 没有弹出二维码？</summary>
+<summary><strong>Q4: 没有弹出二维码？</strong></summary>
 
 打开一个新的终端窗口，手动查看二维码图片：
 
@@ -424,21 +424,21 @@ python wecomapp.py
 ## 5.5 常见问题
 
 <details>
-<summary><strong>Q1：关闭 GenericAgent 窗口会影响 Bot 连接吗？</strong></summary>
+<summary><strong>Q1: 关闭 GenericAgent 窗口会影响 Bot 连接吗？</strong></summary>
 
 **不影响。** 用户启动的是对应平台的 `app.py`（如 `wechatapp.py`），它是独立进程，关闭 GenericAgent 窗口不会中断连接。
 
 </details>
 
 <details>
-<summary><strong>Q2：怎么关闭 Bot 连接？</strong></summary>
+<summary><strong>Q2: 怎么关闭 Bot 连接？</strong></summary>
 
 在运行 `app.py` 的终端中按 `Ctrl + C` 即可中断连接。中断期间发出的消息不会丢失——重新运行 `python wechatapp.py` 后，会按顺序回复中断期间收到的消息。
 
 </details>
 
 <details>
-<summary><strong>Q3：多个平台可以同时运行吗？</strong></summary>
+<summary><strong>Q3: 多个平台可以同时运行吗？</strong></summary>
 
 **可以。** 每个平台是独立进程，互不影响。例如同时运行微信和飞书：
 

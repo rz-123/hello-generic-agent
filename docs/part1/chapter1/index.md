@@ -297,7 +297,24 @@ GA 会自动配好。如果你电脑上没有 Git，它也会帮你下载 portab
 
 ## 1.6 常见问题排查
 
-❓ Windows 安装后闪退 / 重启后无法启动
+<details>
+<summary><strong>Q1: GA 调用工具时输出一大堆乱码 / 不会调用工具了？</strong></summary>
+
+**原因**：你的 `mykey.py` 中使用了非 Native 前缀的变量名（如 `oai_config`、`claude_config`），走的是旧版文本协议，部分模型在该协议下工具调用不稳定。
+
+**解决方法**：把变量名前缀改成 `native_` 开头：
+
+| 改之前 | 改之后 |
+|--------|--------|
+| `claude_config` | `native_claude_config` |
+| `oai_config` | `native_oai_config` |
+
+改完重启 GA 即可。Native 协议使用模型原生的 tool use 格式，工具调用更稳定。
+
+</details>
+
+<details>
+<summary><strong>Q2: Windows 安装后闪退 / 重启后无法启动？</strong></summary>
 
 **常见原因**（按发生概率）：
 
@@ -326,9 +343,10 @@ python launch.py
 2. `mykey.py` 里**只保留一个启用的 config**，其他全部用 `#` 注释
 3. 让 GA 自己补依赖（见 1.5 节"让 GA 自动安装剩余依赖"）
 
+</details>
 
-
-❓ pip 装完后不知道在哪运行 / 不知道 cd 到哪
+<details>
+<summary><strong>Q3: pip 装完后不知道在哪运行 / 不知道 cd 到哪？</strong></summary>
 
 `pip install` 装的是 Python 第三方包（依赖），**不是** GenericAgent 本体。GenericAgent 是一个 GitHub 仓库，必须手动下载 + 解压。
 
@@ -342,9 +360,10 @@ python launch.py
 
 **永久解决**：让 GA 给你建桌面快捷方式（见 1.5 节折叠块"可选：让 GA 帮你做的事"），之后双击图标即可启动。
 
+</details>
 
-
-❓ DinTalClaw 懒人包和命令行安装有什么区别？
+<details>
+<summary><strong>Q4: DinTalClaw 懒人包和命令行安装有什么区别？</strong></summary>
 
 
 | 项目   | DinTalClaw 懒人包      | 命令行安装                  |
@@ -358,17 +377,19 @@ python launch.py
 
 **建议**：想快速体验选懒人包；想长期用选命令行 + git clone。
 
+</details>
 
-
-❓ 能否支持 Win7？
+<details>
+<summary><strong>Q5: 能否支持 Win7？</strong></summary>
 
 **不能。** Python 3.9+ 已官方放弃 Win7，`pywebview` 依赖的 `WebView2` 也装不上。
 
 **临时方案**：Win7 上用命令行模式 + Python 3.8，只跑 `agentmain.py`，不启 `launch.pyw`。但很多前端也跑不起来，**强烈建议升级到 Win10/11**。
 
+</details>
 
-
-❓ 怎样判断是否正常启动了？界面和别人的不一样
+<details>
+<summary><strong>Q6: 怎样判断是否正常启动了？界面和别人的不一样</strong></summary>
 
 
 | 现象                                       | 判定                     |
@@ -381,9 +402,10 @@ python launch.py
 
 "界面不一样"通常是两种 Streamlit 前端：`stapp.py`（默认界面）和 `stapp2.py`（Anthropic 风格浅色主题），二者均正常，选你喜欢的即可。
 
+</details>
 
-
-❓ 如何更新到最新版本？能让 GA 自己更新吗？
+<details>
+<summary><strong>Q7: 如何更新到最新版本？能让 GA 自己更新吗？</strong></summary>
 
 **能！** 两种方式：
 
@@ -410,9 +432,10 @@ git pull
 
 GA 会自己 `git pull` + 解读 commit log + 汇报给你。
 
+</details>
 
-
-❓ API mode 需要改成 responses 吗？
+<details>
+<summary><strong>Q8: API mode 需要改成 responses 吗？</strong></summary>
 
 **默认 `chat_completions` 即可。** 只有两种情况改 `responses`：
 
@@ -427,9 +450,10 @@ native_oai_config_responses = {
 }
 ```
 
+</details>
 
-
-❓ API 繁忙 / 高峰期失败一次就停，能配重试吗？
+<details>
+<summary><strong>Q9: API 繁忙 / 高峰期失败一次就停，能配重试吗？</strong></summary>
 
 **能**，两个层面：
 
@@ -445,9 +469,10 @@ native_claude_config = {
 }
 ```
 
+</details>
 
-
-❓ 接 API key 时需要配上下文长度吗？
+<details>
+<summary><strong>Q10: 接 API key 时需要配上下文长度吗？</strong></summary>
 
 **通常不需要。** 默认 `context_win=24000`（NativeClaude 默认 28000），这只是历史裁剪阈值，不是模型硬上限。
 
@@ -456,6 +481,8 @@ native_claude_config = {
 - 用 1M 上下文 Claude 时：`'model': 'claude-opus-4-6[1m]'` + `'context_win': 800000`
 - MiniMax 204K：`'context_win': 100000`
 - 本地小模型 8K：`'context_win': 6000`
+
+</details>
 
 
 
