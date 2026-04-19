@@ -1,6 +1,8 @@
 <div align="center">
 
-<img src="docs/public/hello-generic-agent.png" alt="Hello Generic Agent" width="100%">
+<img src="docs/public/hello-generic-agent.png" alt="Hello Generic Agent" width="70%">
+
+<p><em>多年以后，当你的 Agent 只用两千个 token 就完成了别人两万个 token 才能启动的任务，<br>你会回想起第一次点开这个教程部署 GA 的那个午后。</em></p>
 
 # Hello Generic Agent（🧪 Beta公测版）
 
