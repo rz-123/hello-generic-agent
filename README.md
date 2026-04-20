@@ -14,7 +14,7 @@
 <img src="https://img.shields.io/github/forks/datawhalechina/hello-generic-agent?style=flat&logo=github" alt="GitHub forks"/>
 <img src="https://img.shields.io/badge/language-Chinese-brightgreen?style=flat" alt="Language"/>
 <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://img.shields.io/badge/license-CC%20BY--NC--SA%204.0-lightgrey" alt="License"/></a>
-<a href="https://aspaszhang.github.io/hello-generic-agent/"><img src="https://img.shields.io/badge/在线阅读-Online%20Reading-green?style=flat&logo=gitbook" alt="Online Reading"></a>
+<a href="https://datawhalechina.github.io/hello-generic-agent/"><img src="https://img.shields.io/badge/在线阅读-Online%20Reading-green?style=flat&logo=gitbook" alt="Online Reading"></a>
 
 </div>
 
@@ -45,7 +45,7 @@
 
 ## 📚 在线阅读
 
-**[🌐 在线阅读](https://aspaszhang.github.io/hello-generic-agent/)** - 无需下载，随时随地学习
+**[🌐 在线阅读](https://datawhalechina.github.io/hello-generic-agent/)** - 无需下载，随时随地学习
 
 ## 📖 目录
 

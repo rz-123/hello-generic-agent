@@ -207,8 +207,8 @@ const jumpLinks = [
   { icon: '📖', title: '应用篇', desc: '从安装到实战', link: '/part1/chapter1/', external: false },
   { icon: '⚙️', title: '原理篇', desc: '深入设计哲学', link: '/part2/chapter7/', external: false },
   { icon: '🐙', title: 'GitHub', desc: '查看GA源码，记得Star！', link: 'https://github.com/lsdefine/GenericAgent', external: true },
-  { icon: '📥', title: 'PDF 下载', desc: '离线阅读', link: 'https://github.com/AspasZhang/hello-generic-agent/releases', external: true },
-  { icon: '💬', title: '提 Issue', desc: '反馈与讨论', link: 'https://github.com/AspasZhang/hello-generic-agent/issues', external: true },
+  { icon: '📥', title: 'PDF 下载', desc: '离线阅读', link: 'https://github.com/datawhalechina/hello-generic-agent/releases', external: true },
+  { icon: '💬', title: '提 Issue', desc: '反馈与讨论', link: 'https://github.com/datawhalechina/hello-generic-agent/issues', external: true },
 ]
 
 

@@ -19,7 +19,7 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     logo: '/datawhale-logo.png',
     nav: [
-      { text: 'PDF版本下载', link: 'https://github.com/AspasZhang/hello-generic-agent/releases' },
+      { text: 'PDF版本下载', link: 'https://github.com/datawhalechina/hello-generic-agent/releases' },
     ],
     search: {
       provider: 'local',
@@ -67,11 +67,11 @@ export default defineConfig({
     ],
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/AspasZhang/hello-generic-agent' }
+      { icon: 'github', link: 'https://github.com/datawhalechina/hello-generic-agent' }
     ],
 
     editLink: {
-      pattern: 'https://github.com/AspasZhang/hello-generic-agent/blob/main/docs/:path'
+      pattern: 'https://github.com/datawhalechina/hello-generic-agent/blob/main/docs/:path'
     },
 
     footer: {
