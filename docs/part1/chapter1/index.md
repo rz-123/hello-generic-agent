@@ -20,7 +20,6 @@ GA 依赖 Python 运行，我们先把它装好。
 
 1. 打开下载链接：[https://www.python.org/ftp/python/3.12.10/python-3.12.10-amd64.exe](https://www.python.org/ftp/python/3.12.10/python-3.12.10-amd64.exe)
 2. 运行安装包，**底部的 "Add python.exe to PATH" 一定要勾上**，然后点击安装
-  img
 3. 验证安装：按 `Win + R` 输入 `cmd` 打开终端，输入：
   ```bash
    python --version
@@ -45,9 +44,7 @@ python3 --version
 python3 --version
 ```
 
-```
-看到`Python 3.x.x` 就说明安装成功了。
-```
+看到 `Python 3.x.x` 就说明安装成功了。
 
 ---
 
@@ -81,7 +78,8 @@ cd d:     (如果你的安装地址在D盘，终端打开后默认在c盘,安装
 cd "你的GenericAgent路径"               （示例： cd D:/Document/GenericAgent-main） 
 
 # 2. 安装最小环境依赖
-pip install streamlit pywebview / pip3 install streamlit pywebview  (python3对应pip3)
+pip install streamlit pywebview
+# 如果你的 Python 3 对应 pip3，则用：pip3 install streamlit pywebview
 ```
 
 
@@ -189,7 +187,7 @@ mixin_config = {
 | apibase                | ——               | API 端点地址                      | 必填                        |
 | model                  | ——               | 模型名，后缀 [1m] 触发 1m 上下文         | 必填                        |
 | fake_cc_system_prompt  | False            | 伪装 Claude Code CLI 指纹         | CC switch / CRS 必须 True   |
-| api_mode               | chat_completions | 可选 responses                  | GPT-5.4 走 Responses API 时 |
+| api_mode               | chat_completions | 可选 responses                  | ⚠️ **GPT-5.4 只能走 `responses`**，必须显式设置 |
 | thinking_type          | adaptive         | adaptive / enabled / disabled | 关思考用 disabled             |
 | thinking_budget_tokens | ——               | 仅 enabled 生效                  | low≈4096 / high≈32768     |
 | reasoning_effort       | ——               | none ~ xhigh                  | o 系列 / Responses API 支持   |
