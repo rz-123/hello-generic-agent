@@ -63,6 +63,12 @@ export default defineConfig({
           { text: '第12章：自我进化', link: '/part2/chapter12/' },
           { text: '第13章：涌现能力', link: '/part2/chapter13/' },
         ]
+      },
+      {
+        text: 'Part 3：实战篇',
+        items: [
+          { text: '第14章：Case 1 — 自动在社交软件上发消息', link: '/part3/chapter14/' },
+        ]
       }
     ],
 
