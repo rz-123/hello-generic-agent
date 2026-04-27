@@ -414,8 +414,14 @@ pip install wecom_aibot_sdk
 cd /path/to/GenericAgent/frontends
 python wecomapp.py
 ```
+![](./images/img_44.png)
 
 6. 在企业微信中找到你的机器人，开始对话
+
+<table><tr>
+<td><img src="./images/img_45.png" width="100%"></td>
+<td><img src="./images/img_46.png" width="100%"></td>
+</tr></table>
 
 </details>
 
